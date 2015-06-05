@@ -6,10 +6,9 @@ using System.Web;
 
 namespace OdeToFood.Models
 {
-    public class OdeToFoodDB : DbContext
+    public class    OdeToFoodDb : DbContext
     {
-        public DbSet<Restaurant> Restaurants { get; set; }
-        public DbSet<Review> Reviews { get; set; }
-
+        public DbSet<Restaurant>  Restaurants { get; set; }
+        public DbSet<RestaurantReview> Reviews{ get; set; } 
     }
 }

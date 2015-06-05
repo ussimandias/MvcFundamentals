@@ -13,7 +13,7 @@ namespace OdeToFood.Controllers
     {
         //OdeToFoodDB _db = new OdeToFoodDB();
 
-        FoodDb _db = new FoodDb();
+        OdeToFoodDb _db = new OdeToFoodDb();
 
         // GET: Reviews
         public ActionResult Index()

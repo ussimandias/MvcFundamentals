@@ -9,7 +9,7 @@ namespace OdeToFood.Models
 {
     public class Address
     {
-        [Key]
+        //[Key]
         public int ID { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
