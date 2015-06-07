@@ -32,6 +32,6 @@ namespace OdeToFood.Models
 
         public System.Data.Entity.DbSet<OdeToFood.Models.Restaurant> Restaurants { get; set; }
 
-        public System.Data.Entity.DbSet<OdeToFood.Models.Review> Reviews { get; set; }
+        public System.Data.Entity.DbSet<OdeToFood.Models.ReviewDB> Reviews { get; set; }
     }
 }

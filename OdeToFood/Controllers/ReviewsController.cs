@@ -20,7 +20,7 @@ namespace OdeToFood.Controllers
         {
             //var model = _db._newReview.FindTheLatest(3);
             return View();
-            return View();
+            
         }
 
         // GET: Reviews/Details/5

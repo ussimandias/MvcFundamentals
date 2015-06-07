@@ -1,7 +1,10 @@
-﻿@model OdeToFood.Models.Review
+﻿@model OdeToFood.Models.ReviewDB
 
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/jqueryval")
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
 
 
 @using (Html.BeginForm()) 
@@ -9,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Review</h4>
+        <h4>ReviewDB</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -55,3 +58,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

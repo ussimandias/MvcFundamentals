@@ -7,7 +7,7 @@ using Microsoft.Ajax.Utilities;
 
 namespace OdeToFood.Models
 {
-    public class Review
+    public class ReviewDB
     {
         
         public int ID { get; set; }
