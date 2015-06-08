@@ -18,8 +18,8 @@ namespace OdeToFood.Controllers
         // GET: Reviews
         public ActionResult Index()
         {
-            //var model = _db._newReview.FindTheLatest(3);
-            return View();
+            var model = _db.ReviewDBs.FindTheLatest(3);
+            return View(model);
             
         }
 

@@ -189,6 +189,10 @@
     <Compile Include="Migrations\201506072238314_AddUpdate1.Designer.cs">
       <DependentUpon>201506072238314_AddUpdate1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506072342531_virtual lazy loading.cs" />
+    <Compile Include="Migrations\201506072342531_virtual lazy loading.Designer.cs">
+      <DependentUpon>201506072342531_virtual lazy loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -268,6 +272,7 @@
     <Content Include="Views\Restaurant\Index.cshtml" />
     <Content Include="Views\Restaurant\Details.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
+    <Content Include="Views\Reviews\_Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,6 +288,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201506072238314_AddUpdate1.resx">
       <DependentUpon>201506072238314_AddUpdate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506072342531_virtual lazy loading.resx">
+      <DependentUpon>201506072342531_virtual lazy loading.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
