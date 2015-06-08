@@ -10,8 +10,7 @@ namespace OdeToFood.Models
     {
 
         public DbSet<Restaurant>  Restaurants { get; set; }
-        public DbSet<Review> Reviews{ get; set; }
-
+        //public DbSet<Review> Reviews{ get; set; }
         public System.Data.Entity.DbSet<OdeToFood.Models.ReviewDB> ReviewDBs { get; set; } 
     }
 }

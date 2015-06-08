@@ -23,6 +23,14 @@ namespace OdeToFood.Controllers
             
         }
 
+        [ChildActionOnly]
+        public ActionResult BestReview()
+        {
+            var model = _db.ReviewDBs.FindTheBest();
+            return PartialView("_Review", model);
+
+        }
+
         // GET: Reviews/Details/5
         public ActionResult Details(int id)
         {
@@ -33,16 +41,20 @@ namespace OdeToFood.Controllers
         public ActionResult Create()
         {
 
-            return View();
+            return View(new ReviewDB());
         }
 
         // POST: Reviews/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(int restaurantID, ReviewDB newReview)
         {
             try
             {
                 // TODO: Add insert logic here
+
+                var restaurant = _db.Restaurants.Single(r => r.ID == restaurantID);
+                restaurant.Reviews.Add(newReview);
+                _db.SaveChanges();
 
                 return RedirectToAction("Index");
             }

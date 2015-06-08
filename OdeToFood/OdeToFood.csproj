@@ -193,6 +193,10 @@
     <Compile Include="Migrations\201506072342531_virtual lazy loading.Designer.cs">
       <DependentUpon>201506072342531_virtual lazy loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506080320543_Review Table.cs" />
+    <Compile Include="Migrations\201506080320543_Review Table.Designer.cs">
+      <DependentUpon>201506080320543_Review Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -200,7 +204,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Restaurant.cs" />
-    <Compile Include="Models\RestaurantReview.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\RestaurantReviewQueries.cs" />
@@ -272,7 +275,8 @@
     <Content Include="Views\Restaurant\Index.cshtml" />
     <Content Include="Views\Restaurant\Details.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
-    <Content Include="Views\Reviews\_Review.cshtml" />
+    <Content Include="Views\Shared\_Review.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506072342531_virtual lazy loading.resx">
       <DependentUpon>201506072342531_virtual lazy loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506080320543_Review Table.resx">
+      <DependentUpon>201506080320543_Review Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

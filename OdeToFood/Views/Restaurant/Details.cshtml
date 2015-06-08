@@ -1,5 +1,11 @@
 ﻿@model OdeToFood.Models.Restaurant
 
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
 <div>
     <h4>Restaurant</h4>
     <hr />
@@ -26,3 +32,12 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<h2>Reviews</h2>
+
+@foreach (var review in Model.Reviews)
+{
+    @Html.Partial("_Review", review)
+}
+
+@Html.ActionLink("Create a new review", "Create", "Reviews", new { restaurantID = Model.ID}, null)
