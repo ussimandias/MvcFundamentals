@@ -185,17 +185,37 @@
     </Compile>
     <Compile Include="Infrastructure\LogAttribute.cs" />
     <Compile Include="Infrastructure\MyHelpers.cs" />
-    <Compile Include="Migrations\201506072238314_AddUpdate1.cs" />
-    <Compile Include="Migrations\201506072238314_AddUpdate1.Designer.cs">
-      <DependentUpon>201506072238314_AddUpdate1.cs</DependentUpon>
+    <Compile Include="Migrations\201506081400540_InitialCreate.cs" />
+    <Compile Include="Migrations\201506081400540_InitialCreate.Designer.cs">
+      <DependentUpon>201506081400540_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201506072342531_virtual lazy loading.cs" />
-    <Compile Include="Migrations\201506072342531_virtual lazy loading.Designer.cs">
-      <DependentUpon>201506072342531_virtual lazy loading.cs</DependentUpon>
+    <Compile Include="Migrations\201506081556048_Reviews.cs" />
+    <Compile Include="Migrations\201506081556048_Reviews.Designer.cs">
+      <DependentUpon>201506081556048_Reviews.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201506080320543_Review Table.cs" />
-    <Compile Include="Migrations\201506080320543_Review Table.Designer.cs">
-      <DependentUpon>201506080320543_Review Table.cs</DependentUpon>
+    <Compile Include="Migrations\201506081558362_Review.cs" />
+    <Compile Include="Migrations\201506081558362_Review.Designer.cs">
+      <DependentUpon>201506081558362_Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506081753133_Review Table.cs" />
+    <Compile Include="Migrations\201506081753133_Review Table.Designer.cs">
+      <DependentUpon>201506081753133_Review Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506081823000_Review1.cs" />
+    <Compile Include="Migrations\201506081823000_Review1.Designer.cs">
+      <DependentUpon>201506081823000_Review1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506081959428_Review Annotations.cs" />
+    <Compile Include="Migrations\201506081959428_Review Annotations.Designer.cs">
+      <DependentUpon>201506081959428_Review Annotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506082011021_DateTime Validation.cs" />
+    <Compile Include="Migrations\201506082011021_DateTime Validation.Designer.cs">
+      <DependentUpon>201506082011021_DateTime Validation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506082019169_Dining Date.cs" />
+    <Compile Include="Migrations\201506082019169_Dining Date.Designer.cs">
+      <DependentUpon>201506082019169_Dining Date.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -277,6 +297,9 @@
     <Content Include="Views\Reviews\Index.cshtml" />
     <Content Include="Views\Shared\_Review.cshtml" />
     <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\BestReview.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Restaurant\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -290,14 +313,29 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201506072238314_AddUpdate1.resx">
-      <DependentUpon>201506072238314_AddUpdate1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506081400540_InitialCreate.resx">
+      <DependentUpon>201506081400540_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201506072342531_virtual lazy loading.resx">
-      <DependentUpon>201506072342531_virtual lazy loading.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506081556048_Reviews.resx">
+      <DependentUpon>201506081556048_Reviews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201506080320543_Review Table.resx">
-      <DependentUpon>201506080320543_Review Table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506081558362_Review.resx">
+      <DependentUpon>201506081558362_Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506081753133_Review Table.resx">
+      <DependentUpon>201506081753133_Review Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506081823000_Review1.resx">
+      <DependentUpon>201506081823000_Review1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506081959428_Review Annotations.resx">
+      <DependentUpon>201506081959428_Review Annotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506082011021_DateTime Validation.resx">
+      <DependentUpon>201506082011021_DateTime Validation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506082019169_Dining Date.resx">
+      <DependentUpon>201506082019169_Dining Date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

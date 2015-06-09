@@ -8,21 +8,21 @@ namespace OdeToFood.Queries
 {
     public static class RestaurantReviewQueries
     {
-        public static IEnumerable<ReviewDB> FindTheLatest(
-            this IQueryable<ReviewDB> reviews, int numberOfReviews)
+        public static IEnumerable<Review> FindTheLatest(
+            this IQueryable<Review> reviews, int numberOfReviews)
         {
-            return reviews.OrderByDescending(r => r.Created)
+            return reviews.OrderByDescending(r => r.DiningDate)
                           .Take(numberOfReviews);
         }
 
-        public static ReviewDB FindById(
-            this IQueryable<ReviewDB> reviews, int id)
+        public static Review FindById(
+            this IQueryable<Review> reviews, int id)
         {
             return reviews.Single(r => r.ID == id);
         }
 
-        public static ReviewDB FindTheBest(
-            this IQueryable<ReviewDB> reviews)
+        public static Review FindTheBest(
+            this IQueryable<Review> reviews)
         {
             return reviews.OrderByDescending(r => r.Rating).First();
         }

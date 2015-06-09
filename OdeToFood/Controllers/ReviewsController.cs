@@ -18,7 +18,10 @@ namespace OdeToFood.Controllers
         // GET: Reviews
         public ActionResult Index()
         {
-            var model = _db.ReviewDBs.FindTheLatest(3);
+            var model = from r in _db.Reviews
+                       orderby r.Name
+                       //where r.Address.State == state || (state == null)
+                       select r;
             return View(model);
             
         }
@@ -26,7 +29,7 @@ namespace OdeToFood.Controllers
         [ChildActionOnly]
         public ActionResult BestReview()
         {
-            var model = _db.ReviewDBs.FindTheBest();
+            var model = _db.Reviews.FindTheBest();
             return PartialView("_Review", model);
 
         }
@@ -41,12 +44,12 @@ namespace OdeToFood.Controllers
         public ActionResult Create()
         {
 
-            return View(new ReviewDB());
+            return View(new Review());
         }
 
         // POST: Reviews/Create
         [HttpPost]
-        public ActionResult Create(int restaurantID, ReviewDB newReview)
+        public ActionResult Create(int restaurantID, Review newReview)
         {
             try
             {
@@ -67,23 +70,26 @@ namespace OdeToFood.Controllers
         // GET: Reviews/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var review = _db.Reviews.FindById(id);
+            return View(review);
         }
 
         // POST: Reviews/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
-            try
-            {
+            
+                var review = _db.Reviews.FindById(id);
+
+                if (TryUpdateModel(review))
+                {
+                    _db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
                 // TODO: Add update logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+                return View(review);
+            
         }
 
         // GET: Reviews/Delete/5

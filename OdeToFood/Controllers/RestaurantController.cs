@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OdeToFood.Models;
+using OdeToFood.Queries;
 
 namespace OdeToFood.Controllers
 {
@@ -35,5 +36,32 @@ namespace OdeToFood.Controllers
 
             return View(model);
         }
+
+
+        //[HttpGet]
+        //public ActionResult Edit(int id)
+        //{
+        //    var review = _db.Reviews.FindById(id);
+        //    return View(review);
+
+
+        //}
+
+        //[HttpPost]
+        //public ActionResult Edit(int id, FormCollection collection)
+        //{
+        //    var review = _db.Reviews.FindById(id);
+
+        //    if (TryUpdateModel(review))
+        //    {
+        //        _db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    // TODO: Add update logic here
+
+        //    return View(review);
+
+            
+        //}
     }
 }

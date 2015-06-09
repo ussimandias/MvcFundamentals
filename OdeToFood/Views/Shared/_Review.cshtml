@@ -1,4 +1,4 @@
-﻿@model OdeToFood.Models.ReviewDB
+﻿@model OdeToFood.Models.Review
 
 <table>
 
@@ -13,13 +13,13 @@
             @Html.DisplayFor(modelItem => Model.Body)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.Created)
+            @Html.DisplayFor(modelItem => Model.DiningDate)
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
             @Html.ActionLink("Details", "Details", new { id = Model.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id = Model.ID })
-        </td>
+        </td>*@
     </tr>
 
 

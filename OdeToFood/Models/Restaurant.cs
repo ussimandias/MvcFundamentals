@@ -13,7 +13,7 @@ namespace OdeToFood.Models
         public virtual string Name { get; set; }
         public virtual Address Address { get; set; }
         //public string ChefsName { get; set; }
-        public virtual ICollection<ReviewDB> Reviews { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
          
         
     }
