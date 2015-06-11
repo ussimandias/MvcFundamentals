@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 <h2>Edit</h2>
 
 @using (Html.BeginForm())
@@ -41,10 +42,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DininingDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DiningDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DininingDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DininingDate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.DiningDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DiningDate, "", new { @class = "text-danger" })
             </div>
         </div>
 

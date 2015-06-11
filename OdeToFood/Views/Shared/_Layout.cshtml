@@ -6,6 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
 
 </head>
 <body>
@@ -43,6 +45,17 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="~/Scripts/jQuery.tmpl.min.js"></script>
+    <script src="~/Scripts/OdeToFood.js"></script>
     @RenderSection("scripts", required: false)
+    
 </body>
 </html>
+
+@*@helper Script(string scriptName)
+{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}*@

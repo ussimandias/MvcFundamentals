@@ -12,14 +12,18 @@ namespace OdeToFood.Models
         public int ID { get; set; }
         public Restaurant Restaurant { get; set; }
         public string Name { get; set; }
+
         [Range(1,10)]
-        public int Rating { get; set; }       
+        public int Rating { get; set; }    
+   
         [Required]
         [DataType(DataType.MultilineText)]
         public string Body { get; set; }
 
-        public DateTime DiningDate { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
+        public DateTime DiningDate { get; set; }
+       
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             var field = new[] { "DiningDate" };

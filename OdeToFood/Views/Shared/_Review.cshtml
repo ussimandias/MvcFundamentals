@@ -1,26 +1,45 @@
 ﻿@model OdeToFood.Models.Review
 
-<table>
+<div>
+   
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Body)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.DiningDate)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-            @Html.ActionLink("Details", "Details", new { id = Model.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = Model.ID })
-        </td>*@
-    </tr>
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Rating
+            </th>
+            <th>
+                Body
+            </th>
+            <th>
+                Dining Date
+            </th>
+            <th>
+                
+            </th>
+        </tr>
 
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Body)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.DiningDate)
+            </td>
+            <td>
+                @Html.ActionLink("Go Back!", "Index", "Home")
 
-</table>
+            </td>
+        </tr>
+
+    </table>
+</div>
