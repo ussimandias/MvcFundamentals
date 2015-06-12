@@ -8,6 +8,11 @@
 
 @ViewBag.Message
 
+
+<p>
+    You are logged in as @User.Identity.Name
+</p>
+
 <div id="latestReview">
     @Ajax.ActionLink("Click Here to see the latest review",
         "LatestReview", new AjaxOptions
@@ -38,16 +43,58 @@
 
 
 <form method="GET" action="@Url.Action("JsonSearch", "Home")" id="SearchForm">
+    <div>
     <input type="text" name="q" data-autocomplete="@Url.Action("QuickSearch", "Home")"/>
     <input type="submit" value="Search"/>
+    </div>
+
+    </form><form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        
+        <tbody id="searchResults"></tbody>
+
+    </table>
+
+
 </form>
+   
 
-<table class="table">
- 
+
+@*<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+
     <tbody id="searchResults">
-    
+
     </tbody>
-</table>
+    
+</table>*@
+
+<div>
+<script id="searchTemplate" type="text/x-jquery-tmpl">
+
+    <tr>
+        <td>
+            ${Name}
+        </td>
+        <td>
+            ${City}, ${Country}
+        </td>
+    </tr>
+</script>
+
+
+</div>
 
 
 
@@ -57,8 +104,9 @@
 
 
 
-       
-        <div class="row">
+
+
+<div class="row">
             <div class="col-md-4">
                 <h2>Getting started</h2>
                 <p>

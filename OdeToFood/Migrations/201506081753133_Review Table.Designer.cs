@@ -13,7 +13,7 @@ namespace OdeToFood.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201506080320543_Review Table"; }
+            get { return "201506081753133_Review Table"; }
         }
         
         string IMigrationMetadata.Source

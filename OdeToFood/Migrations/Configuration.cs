@@ -1,6 +1,7 @@
+using OdeToFood.Models;
+
 namespace OdeToFood.Migrations
 {
-    using OdeToFood.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -13,7 +14,6 @@ namespace OdeToFood.Migrations
             AutomaticMigrationsEnabled = false;
             ContextKey = "OdeToFood.Models.OdeToFoodDb";
         }
-
 
         protected override void Seed(OdeToFood.Models.OdeToFoodDb context)
         {
@@ -31,8 +31,8 @@ namespace OdeToFood.Migrations
             //
 
             context.Restaurants.AddOrUpdate(
-             p=>p.Name,
-   
+             p => p.Name,
+
             new Restaurant { Name = "Marrakesh", Address = new Models.Address { City = "Washington", State = "D.C", Country = "USA" } },
             new Restaurant { Name = "Biblos", Address = new Models.Address { City = "Tampa", State = "FL", Country = "USA" } },
             new Restaurant { Name = "N'gam", Address = new Models.Address { City = "NYC", State = "NY", Country = "USA" } },

@@ -53,6 +53,7 @@ namespace OdeToFood.Controllers
             return PartialView("_Review", review);
         }
 
+        [Authorize]
         public ViewResult Index()
         {
             ViewBag.Message = string.Format("{0}::{1} {2}", RouteData.Values["controller"], RouteData.Values["action"], RouteData.Values["id"]);

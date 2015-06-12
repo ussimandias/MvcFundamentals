@@ -3,12 +3,25 @@ namespace OdeToFood.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddUpdate1 : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.ReviewDBs",
+                "dbo.Restaurants",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Address_Street = c.String(),
+                        Address_City = c.String(),
+                        Address_State = c.String(),
+                        Address_Country = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.Reviews",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
@@ -26,9 +39,10 @@ namespace OdeToFood.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.ReviewDBs", "Restaurant_ID", "dbo.Restaurants");
-            DropIndex("dbo.ReviewDBs", new[] { "Restaurant_ID" });
-            DropTable("dbo.ReviewDBs");
+            DropForeignKey("dbo.Reviews", "Restaurant_ID", "dbo.Restaurants");
+            DropIndex("dbo.Reviews", new[] { "Restaurant_ID" });
+            DropTable("dbo.Reviews");
+            DropTable("dbo.Restaurants");
         }
     }
 }

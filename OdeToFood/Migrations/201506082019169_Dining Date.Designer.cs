@@ -7,13 +7,13 @@ namespace OdeToFood.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddUpdate1 : IMigrationMetadata
+    public sealed partial class DiningDate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddUpdate1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(DiningDate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201506072238314_AddUpdate1"; }
+            get { return "201506082019169_Dining Date"; }
         }
         
         string IMigrationMetadata.Source
